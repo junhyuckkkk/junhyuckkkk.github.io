@@ -1,0 +1,32 @@
+name: 오느리 운동 문의
+description: 사용 중 문제, 불편한 광고, 개선 의견을 알려주세요.
+title: "[오느리 운동] "
+body:
+  - type: markdown
+    attributes:
+      value: "공개 게시판입니다. 사진 원본, 전화번호, 이메일, 결제 정보 등 개인정보는 포함하지 마세요."
+  - type: dropdown
+    id: category
+    attributes:
+      label: 문의 종류
+      options:
+        - 알람
+        - 사진 확인
+        - 일정 또는 기록
+        - 불편한 광고
+        - 개인정보 처리에 관한 일반 문의
+        - 개선 의견
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 아이폰 기종과 iOS 버전
+      placeholder: 예) iPhone 14, iOS 26
+  - type: textarea
+    id: description
+    attributes:
+      label: 어떤 상황이었나요?
+      description: 문제를 재현할 수 있는 순서와 기대한 결과를 알려주세요. 광고 신고는 광고 이름과 불편했던 내용을 적어주세요.
+    validations:
+      required: true

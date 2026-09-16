@@ -1,0 +1,34 @@
+name: 먹콩이 문의
+description: 먹콩이 사용 중 문제나 개선 의견을 남겨주세요.
+title: "[먹콩이] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        문의 내용은 공개됩니다. 사진 원본, 전화번호, 이메일, 주소, 결제 정보 등 개인정보는 작성하지 마세요.
+  - type: dropdown
+    id: type
+    attributes:
+      label: 문의 종류
+      options:
+        - 앱 사용 문제
+        - 알림 또는 위젯
+        - 광고 또는 구매
+        - 개선 의견
+        - 기타
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 사용 환경
+      description: "예: iPhone 17, iOS 26.5, 먹콩이 1.0 (1)"
+      placeholder: iPhone 모델, iOS와 앱 버전
+  - type: textarea
+    id: details
+    attributes:
+      label: 내용
+      description: 발생한 상황과 재현 순서, 기대한 동작을 적어주세요.
+    validations:
+      required: true

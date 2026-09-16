@@ -1,0 +1,32 @@
+name: 오늘의 초록 문의
+description: 식물 등록, 돌봄 기록, 알림 문제와 개선 의견을 알려주세요.
+title: "[오늘의 초록] "
+body:
+  - type: markdown
+    attributes:
+      value: "공개 게시판입니다. 식물 사진 원본, 전화번호, 이메일 등 개인정보는 포함하지 마세요."
+  - type: dropdown
+    id: category
+    attributes:
+      label: 문의 종류
+      options:
+        - 식물 등록 또는 사진
+        - 물주기와 돌봄 기록
+        - 알림
+        - 데이터 보관 또는 삭제
+        - 개인정보 처리에 관한 일반 문의
+        - 개선 의견
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 아이폰 기종과 iOS 버전
+      placeholder: 예) iPhone 15, iOS 26
+  - type: textarea
+    id: description
+    attributes:
+      label: 어떤 상황이었나요?
+      description: 문제를 재현할 수 있는 순서와 기대한 결과를 알려주세요.
+    validations:
+      required: true
